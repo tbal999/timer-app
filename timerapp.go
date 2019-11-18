@@ -93,7 +93,6 @@ func TimedAction(hrs, min, sec int, y string) {
 }
 
 func main() {
-	storedtime := storeTime{}
 	gameover := 0
 	Scanner := bufio.NewScanner(os.Stdin)
 	fmt.Println("==TIMER APP==")
@@ -102,6 +101,7 @@ func main() {
 	fmt.Println("Type message you would like to see:")
 	fmt.Println("")
 	for gameover != 1 {
+		storedtime := storeTime{}
 		Scanner.Scan()
 		result := Scanner.Text()
 		if result == "q" {
